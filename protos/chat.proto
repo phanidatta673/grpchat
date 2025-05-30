@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package chat;
+
+// This is a bidirectional stream chat service
+service ChatService {
+    rpc JoinChat(stream ChatMessage) returns (stream ChatMessage);
+}
+
+// Chat Message Structure
+message ChatMessage {
+    string user_id = 1;
+    string username = 2;
+    string message = 3;
+    int64 timestamp = 4;
+    MessageType type = 5;
+    string room_id = 6;
+}
+
+// Message Type Structure for different enum types
+enum MessageType {
+    TEXT = 0; // Regular chat message
+    JOIN = 1; // User joined notificaiton
+    LEAVE = 2; // User left notification
+    SYSTEM = 3; // System announcements
+}

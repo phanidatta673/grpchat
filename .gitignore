@@ -1,0 +1,40 @@
+# Virtual environment
+venv/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# gRPC and protobuf generated files (if needed to be ignored)
+*.pb2.py
+*.pb2_grpc.py
+
+# Logs and local data
+*.log
+*.db
+*.sqlite3
+
+# Test artifacts
+*.pytest_cache/
+*.coverage
+coverage.xml
+htmlcov/
+
+# IDE and editor settings
+.vscode/
+.idea/
+*.swp
+
+# Bytecode files and distribution
+build/
+dist/
+*.egg-info/
+
+# Environment files
+.env
+.env.*
+
+# OS generated files
+.DS_Store
+Thumbs.db
